@@ -29,7 +29,7 @@ public class Order implements Serializable
 	 private Double latitude;
 	 private Double longitude;
 	 private Instant moment;
-	 private Order status;
+	 private OrderStatus status;
 	 
 	 
 	 @ManyToMany
@@ -42,7 +42,7 @@ public class Order implements Serializable
 	 public Order() {
 }
 
-	public Order(Long id, String address, Double latitude, Double longitude, Instant moment, Order status) {
+	public Order(Long id, String address, Double latitude, Double longitude, Instant moment, OrderStatus status) {
 		super();
 		this.id = id;
 		this.address = address;
@@ -92,11 +92,11 @@ public class Order implements Serializable
 		this.moment = moment;
 	}
 
-	public Order getStatus() {
+	public OrderStatus getStatus() {
 		return status;
 	}
 
-	public void setStatus(Order status) {
+	public void setStatus(OrderStatus status) {
 		this.status = status;
 	}
 
